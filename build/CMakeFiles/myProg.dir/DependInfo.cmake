@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/App.cpp" "CMakeFiles/myProg.dir/src/App.cpp.o" "gcc" "CMakeFiles/myProg.dir/src/App.cpp.o.d"
   "/Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/Menu.cpp" "CMakeFiles/myProg.dir/src/Menu.cpp.o" "gcc" "CMakeFiles/myProg.dir/src/Menu.cpp.o.d"
+  "/Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/Parser.cpp" "CMakeFiles/myProg.dir/src/Parser.cpp.o" "gcc" "CMakeFiles/myProg.dir/src/Parser.cpp.o.d"
   "/Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/main.cpp" "CMakeFiles/myProg.dir/src/main.cpp.o" "gcc" "CMakeFiles/myProg.dir/src/main.cpp.o.d"
   )
 

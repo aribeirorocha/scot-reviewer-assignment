@@ -1,70 +1,114 @@
 #include "Menu.h"
 #include <iostream>
 #include <limits>
+#include <string>
+
+
 Menu::Menu() { }
 
-void Menu::runInteractive(){
+void Menu::runInteractive() {
     bool running = true;
-    while (running){
+    while (running) {
         displayOptions();
         int choice;
         std::cin >> choice;
+
         // Tratamento de erros: se o utilizador inserir um caracter em vez de número
-        if(std::cin.fail()){
+        if (std::cin.fail()) {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "[ERRO] Invalid input. Por favor, insira um número." << std::endl;
+            std::cout << "\n[ERRO] Input invalido. Por favor, insira um numero.\n" << std::endl;
             continue;
         }
+
         running = handleChoice(choice);
     }
 }
+
 
 void Menu::displayOptions() const {
     std::cout << "\n=========================================\n";
     std::cout << "  Scientific Conference Organization Tool  \n";
     std::cout << "=========================================\n";
-    std::cout << "1. Carregar Dados (Parse CSV)\n";
-    std::cout << "2. Ver Submissoes e Revisores\n";
-    std::cout << "3. Gerar Atribuicoes de Revisao (Max Flow)\n";
-    std::cout << "4. Analise de Risco\n";
+    std::cout << "1. Carregar Dados (Parse CSV & Build Graph)\n";
+    std::cout << "2. Listar Informacoes (Submissoes, Revisores e Params)\n";
+    std::cout << "3. Gerar Atribuicoes de Revisao (T2.1 - Max Flow)\n";
+    std::cout << "4. Executar Analise de Risco (T2.2/T2.3)\n";
     std::cout << "0. Sair\n";
+    std::cout << "-----------------------------------------\n";
     std::cout << "Escolha uma opcao: ";
 }
 
+
 bool Menu::handleChoice(int choice) {
     switch (choice) {
-        case 1:
-            std::cout << "[Info] A carregar dados... (Por implementar T1.2)\n";
-            break;
-        case 2:
-            std::cout << "[Info] A mostrar dados... (Por implementar T1.2)\n";
-            break;
-        case 3:
-            std::cout << "[Info] A calcular Max Flow... (Por implementar T2.1)\n";
+        case 1: {
+            std::string filename;
+            std::cout << "\nDigite o caminho do ficheiro (ex: data/input.csv) ou Enter para padrao: ";
+            
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
+            std::getline(std::cin, filename);
+            
+            if (filename.empty()) filename = "data/input.csv";
 
+            // Chama a App para carregar os dados e montar o grafo inicial (T1.2)
+            if (app.loadData(filename)) {
+                std::cout << "[SUCESSO] Ficheiro processado e Grafo inicializado.\n";
+            }
+            break;
+        }
+        case 2: {
+            // Verifica se já existem dados carregados no parser da App
+            const auto& submissions = app.getParser().getSubmissions();
+            const auto& reviewers = app.getParser().getReviewers();
+            const auto& params = app.getParser().getParams();
+
+            if (submissions.empty()) {
+                std::cout << "\n[AVISO] Nenhum dado carregado. Use a opcao 1 primeiro.\n";
+                break;
+            }
+            
+            std::cout << "\n--- ESTATISTICAS DOS DADOS ---\n";
+            std::cout << "Submissoes: " << submissions.size() << "\n";
+            std::cout << "Revisores:  " << reviewers.size() << "\n";
+            std::cout << "Vertices no Grafo: " << app.getGraph().getVertexSet().size() << "\n";
+            
+            std::cout << "\n--- PARAMETROS CONFIGURADOS ---\n";
+            std::cout << "Min Reviews/Submissao: " << params.minReviewsPerSubmission << "\n";
+            std::cout << "Max Reviews/Revisor:   " << params.maxReviewsPerReviewer << "\n";
+            std::cout << "Modo de Atribuicao:    " << params.generateAssignments << "\n";
+            std::cout << "Ficheiro de Saida:     " << params.outputFileName << "\n";
+            
+            // Lista os IDs das submissões (exemplo de "request list of submissions")
+            std::cout << "\nIDs das Submissoes: ";
+            for(const auto& s : submissions) std::cout << s.id << " ";
+            std::cout << "\n";
+            break;
+        }
+        case 3:
+            std::cout << "\n[T2.1] A calcular Max Flow... (A ser implementado)\n";
             break;
         case 4:
-            std::cout << "[Info] A executar Analise de Risco... (Por implementar T2.2+)\n";
+            std::cout << "\n[T2.2] A executar Analise de Risco... (A ser implementado)\n";
             break;
         case 0:
-            std::cout << "A encerrar o programa!\n";
+            std::cout << "\nA encerrar o programa. Ate breve!\n";
             return false;
         default:
-            std::cerr << "[Erro] Opcao invalida. Escolha um numero entre 0 e 4.\n";
+            std::cerr << "\n[ERRO] Opcao invalida. Tente novamente.\n";
             break;
     }
     return true;
 }
 
+
 void Menu::runBatch(const std::string& inputFile, const std::string& riskFile) {
-    std::cout << "[Batch Mode] A iniciar processamento...\n";
-    std::cout << "Ficheiro de Input: " << inputFile << "\n";
+    std::cout << "[Batch Mode] A iniciar processamento de: " << inputFile << std::endl;
     
-    if (!riskFile.empty()) {
-        std::cout << "Ficheiro de Output de Risco: " << riskFile << "\n";
+    if (app.loadData(inputFile)) {
+        std::cout << "[Batch Mode] Dados carregados. Gerando outputs...\n";
+        // Futuramente: app.executeMaxFlow();
+    } else {
+        std::cerr << "[Batch Mode ERRO] Falha ao processar o ficheiro." << std::endl;
     }
-
-
-    std::cout << "[Batch Mode] Processamento concluido.\n";
 }

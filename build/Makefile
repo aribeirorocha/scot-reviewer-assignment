@@ -129,6 +129,30 @@ myProg/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myProg.dir/build.make CMakeFiles/myProg.dir/build
 .PHONY : myProg/fast
 
+src/App.o: src/App.cpp.o
+.PHONY : src/App.o
+
+# target to build an object file
+src/App.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myProg.dir/build.make CMakeFiles/myProg.dir/src/App.cpp.o
+.PHONY : src/App.cpp.o
+
+src/App.i: src/App.cpp.i
+.PHONY : src/App.i
+
+# target to preprocess a source file
+src/App.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myProg.dir/build.make CMakeFiles/myProg.dir/src/App.cpp.i
+.PHONY : src/App.cpp.i
+
+src/App.s: src/App.cpp.s
+.PHONY : src/App.s
+
+# target to generate assembly for a file
+src/App.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myProg.dir/build.make CMakeFiles/myProg.dir/src/App.cpp.s
+.PHONY : src/App.cpp.s
+
 src/Menu.o: src/Menu.cpp.o
 .PHONY : src/Menu.o
 
@@ -152,6 +176,30 @@ src/Menu.s: src/Menu.cpp.s
 src/Menu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myProg.dir/build.make CMakeFiles/myProg.dir/src/Menu.cpp.s
 .PHONY : src/Menu.cpp.s
+
+src/Parser.o: src/Parser.cpp.o
+.PHONY : src/Parser.o
+
+# target to build an object file
+src/Parser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myProg.dir/build.make CMakeFiles/myProg.dir/src/Parser.cpp.o
+.PHONY : src/Parser.cpp.o
+
+src/Parser.i: src/Parser.cpp.i
+.PHONY : src/Parser.i
+
+# target to preprocess a source file
+src/Parser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myProg.dir/build.make CMakeFiles/myProg.dir/src/Parser.cpp.i
+.PHONY : src/Parser.cpp.i
+
+src/Parser.s: src/Parser.cpp.s
+.PHONY : src/Parser.s
+
+# target to generate assembly for a file
+src/Parser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myProg.dir/build.make CMakeFiles/myProg.dir/src/Parser.cpp.s
+.PHONY : src/Parser.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -186,9 +234,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... myProg"
+	@echo "... src/App.o"
+	@echo "... src/App.i"
+	@echo "... src/App.s"
 	@echo "... src/Menu.o"
 	@echo "... src/Menu.i"
 	@echo "... src/Menu.s"
+	@echo "... src/Parser.o"
+	@echo "... src/Parser.i"
+	@echo "... src/Parser.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

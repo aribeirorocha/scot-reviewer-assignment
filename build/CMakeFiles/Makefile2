@@ -85,12 +85,12 @@ clean: CMakeFiles/myProg.dir/clean
 CMakeFiles/myProg.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myProg.dir/build.make CMakeFiles/myProg.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myProg.dir/build.make CMakeFiles/myProg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/build/CMakeFiles --progress-num=1,2,3 "Built target myProg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target myProg"
 .PHONY : CMakeFiles/myProg.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/myProg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/myProg.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/build/CMakeFiles 0
 .PHONY : CMakeFiles/myProg.dir/rule
@@ -102,7 +102,7 @@ myProg: CMakeFiles/myProg.dir/rule
 # codegen rule for target.
 CMakeFiles/myProg.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myProg.dir/build.make CMakeFiles/myProg.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target myProg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/build/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target myProg"
 .PHONY : CMakeFiles/myProg.dir/codegen
 
 # clean rule for target.

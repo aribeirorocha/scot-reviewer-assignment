@@ -39,3 +39,14 @@
 
 # debug information files
 *.dwo
+
+# Pastas do CMake
+build/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+
+# Pastas de IDEs e ficheiros de Sistema
+.vscode/
+.idea/
+.DS_Store

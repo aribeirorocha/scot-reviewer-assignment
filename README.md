@@ -55,7 +55,7 @@ A documentação técnica detalhada, incluindo diagramas de classes e análise d
 doxygen Doxyfile
 ```
 
-## 6.Autores
+## 6. Autores
 André Rocha - up202407636
 <completar>
 <completar>

@@ -4,7 +4,9 @@
  */
 
 #include "App.h"
+#include "Graph.h"
 #include <iostream>
+#include <fstream>
 
 /**
  * @brief Carrega os dados do ficheiro fornecido e inicializa a estrutura do grafo.
@@ -47,4 +49,35 @@ void App::buildInitialGraph() {
     }
     
     std::cout << "[Grafo] Vertices criados: " << masterGraph.getVertexSet().size() << std::endl;
+}
+
+void App::solveT21() {
+    Graph<int> flowGraph;
+    int s = -1, t = -2; // IDs para Super-Source e Super-Sink
+    flowGraph.addVertex(s);
+    flowGraph.addVertex(t);
+
+    auto params = parser.getParams();
+    
+    // Conectar Source às Submissões
+    for (auto& sub : parser.getSubmissions()) {
+        flowGraph.addVertex(sub.id);
+        flowGraph.addEdge(s, sub.id, params.minReviewsPerSubmission);
+        
+        // Conectar Submissão aos Revisores com o mesmo domínio primário
+        for (auto& rev : parser.getReviewers()) {
+            if (sub.primaryDomain == rev.primaryExpertise) {
+                flowGraph.addVertex(rev.id);
+                flowGraph.addEdge(sub.id, rev.id, 1);
+            }
+        }
+    }
+
+    // Conectar Revisores ao Sink
+    for (auto& rev : parser.getReviewers()) {
+        flowGraph.addEdge(rev.id, t, params.maxReviewsPerReviewer);
+    }
+
+    double total = flowGraph.edmondsKarp(s, t);
+    std::cout << "\n[T2.1] Sucesso! Total de atribuicoes: " << total << std::endl;
 }

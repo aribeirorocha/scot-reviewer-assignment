@@ -16,6 +16,8 @@
  * @brief Representa um grafo composto por um conjunto de vértices.
  * @tparam T Tipo de dado a ser armazenado nos vértices (ex: int, string).
  */
+#include <queue>
+#include <algorithm>
 
 template <class T>
 class Graph {
@@ -71,8 +73,9 @@ public:
      */
     
     std::vector<Vertex<T>*> getVertexSet() const;
-
+    double edmondsKarp(T source, T target); 
 private:
+    bool bfs(Vertex<T>* s, Vertex<T>* t);
     std::vector<Vertex<T>*> vertexSet;
 };
 
@@ -128,6 +131,57 @@ void Graph<T>::addBidirectionalEdge(const T& sourc, const T& dest, double capaci
 template <class T>
 std::vector<Vertex<T>*> Graph<T>::getVertexSet() const {
     return vertexSet;
+}
+
+
+
+// Adiciona este método auxiliar também
+template <class T>
+bool bfs(Vertex<T>* s, Vertex<T>* t) {
+    for (auto v : vertexSet) v->setVisited(false);
+    std::queue<Vertex<T>*> q;
+    q.push(s);
+    s->setVisited(true);
+    while (!q.empty()) {
+        auto v = q.front(); q.pop();
+        if (v == t) return true;
+        for (auto e : v->getAdj()) {
+            if (!e->getDest()->isVisited() && e->getCapacity() - e->getFlow() > 0) {
+                e->getDest()->setVisited(true);
+                e->getDest()->setPath(e);
+                q.push(e->getDest());
+            }
+        }
+    }
+    return false;
+}
+template <class T>
+double edmondsKarp(T source, T target) {
+    Vertex<T> *s = findVertex(source);
+    Vertex<T> *t = findVertex(target);
+    if (s == nullptr || t == nullptr) return 0;
+
+    for (auto v : vertexSet) {
+        for (auto e : v->getAdj()) e->setFlow(0);
+    }
+
+    double maxFlow = 0;
+    while (bfs(s, t)) {
+        double minResidual = 1e18;
+        for (auto v = t; v != s; ) {
+            auto e = v->getPath();
+            minResidual = std::min(minResidual, e->getCapacity() - e->getFlow());
+            v = e->getOrig();
+        }
+        for (auto v = t; v != s; ) {
+            auto e = v->getPath();
+            e->setFlow(e->getFlow() + minResidual);
+            e->getReverse()->setFlow(e->getReverse()->getFlow() - minResidual);
+            v = e->getOrig();
+        }
+        maxFlow += minResidual;
+    }
+    return maxFlow;
 }
 
 #endif

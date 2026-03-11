@@ -114,17 +114,8 @@ bool Menu::handleChoice(int choice) {
             break;
         }
         case 3:
-            std::cout << "\n[T2.1] A calcular Max Flow... (A ser implementado)\n";
-            break;
-        case 4:
-            std::cout << "\n[T2.2] A executar Analise de Risco... (A ser implementado)\n";
-            break;
-        case 0:
-            std::cout << "\nA encerrar o programa. Ate breve!\n";
-            return false;
-        default:
-            std::cerr << "\n[ERRO] Opcao invalida. Tente novamente.\n";
-            break;
+    app.solveT21();
+    break;
     }
     return true;
 }

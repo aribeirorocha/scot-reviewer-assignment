@@ -32,6 +32,7 @@ public:
      * M o comprimento das linhas, S o número de submissões e R o de revisores.
      */
     
+    void solveT21();
     // Carrega o ficheiro e constrói o Grafo inicial
     bool loadData(const std::string& filename);
 
@@ -51,6 +52,7 @@ public:
      */
 
     const Graph<int>& getGraph() const { return masterGraph; }
+    
 
 private:
     /** @brief Instância do Parser responsável pela leitura dos ficheiros. */
@@ -67,6 +69,7 @@ private:
 
     // Constrói a estrutura do grafo com base nos dados lidos
     void buildInitialGraph();
+    
 };
 
 #endif

@@ -1,5 +1,0 @@
-<map id="Graph::addBidirectionalEdge" name="Graph::addBidirectionalEdge">
-<area shape="rect" id="Node000001" title="Adiciona uma aresta e a sua correspondente reversa para grafos de fluxo." alt="" coords="5,5,192,31"/>
-<area shape="rect" id="Node000002" href="$class_graph.html#a8b7b7465fbfd562e2a469f90a437ab75" title="Procura um vértice no grafo com base na informação fornecida." alt="" coords="240,5,363,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,16,227,18,222,18,192,21"/>
-</map>

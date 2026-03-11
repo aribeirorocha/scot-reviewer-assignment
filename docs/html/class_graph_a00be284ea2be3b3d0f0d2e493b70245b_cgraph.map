@@ -1,5 +1,0 @@
-<map id="Graph::addVertex" name="Graph::addVertex">
-<area shape="rect" id="Node000001" title="Adiciona um novo vértice ao grafo." alt="" coords="5,5,129,31"/>
-<area shape="rect" id="Node000002" href="$class_graph.html#a8b7b7465fbfd562e2a469f90a437ab75" title="Procura um vértice no grafo com base na informação fornecida." alt="" coords="177,5,300,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,16,164,18,158,18,129,21"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="main" name="main">
-<area shape="rect" id="Node000001" title="Função principal do programa." alt="" coords="5,31,55,56"/>
-<area shape="rect" id="Node000002" href="$class_menu.html#af4596275b3e9553ea9d4218de0bbc843" title="Executa o programa em modo batch (processamento automático)." alt="" coords="116,5,230,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,37,102,29,99,33,56,42"/>
-<area shape="rect" id="Node000003" href="$class_menu.html#a34fe77778cc2bbf9b2708418e93e1f39" title="Inicia o modo de menu interativo no terminal." alt="" coords="103,55,243,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="55,45,90,52,85,54,55,50"/>
-</map>

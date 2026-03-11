@@ -50,3 +50,6 @@ Makefile
 .vscode/
 .idea/
 .DS_Store
+
+docs/html/
+docs/latex/

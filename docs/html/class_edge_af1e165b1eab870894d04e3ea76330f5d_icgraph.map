@@ -1,0 +1,7 @@
+<map id="Edge::Edge" name="Edge::Edge">
+<area shape="rect" id="Node000001" title="Construtor da classe Edge." alt="" coords="180,31,269,56"/>
+<area shape="rect" id="Node000002" href="$class_edge.html#af0a900f3006e47b9f363df7429298eeb" title="Obtém a aresta reversa (residual)." alt="" coords="5,5,132,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,34,132,31,132,26,167,33"/>
+<area shape="rect" id="Node000003" href="$class_edge.html#a1bc84542b5c2a6a8ed110037854a76e0" title="Define a aresta reversa no grafo residual." alt="" coords="5,55,132,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,53,132,60,132,55,167,52"/>
+</map>

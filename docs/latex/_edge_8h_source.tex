@@ -1,0 +1,64 @@
+\doxysection{Edge.\+h}
+\hypertarget{_edge_8h_source}{}\label{_edge_8h_source}\index{src/Edge.h@{src/Edge.h}}
+\doxymbox{\hyperlink{_edge_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ EDGE\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ EDGE\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_vertex}{Vertex}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_edge_af1e165b1eab870894d04e3ea76330f5d}{Edge}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \doxymbox{\hyperlink{class_edge_af1e165b1eab870894d04e3ea76330f5d}{Edge}}(\doxymbox{\hyperlink{class_vertex}{Vertex<T>}}*\ orig,\ \doxymbox{\hyperlink{class_vertex}{Vertex<T>}}*\ dest,\ \textcolor{keywordtype}{double}\ capacity);}
+\DoxyCodeLine{00031\ \ \ \ \ \doxymbox{\hyperlink{class_vertex}{Vertex<T>}}*\ \doxymbox{\hyperlink{class_edge_a9a2de066dff8513dd788d553fc1d0c81}{getDest}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \ \ \ \ \doxymbox{\hyperlink{class_vertex}{Vertex<T>}}*\ \doxymbox{\hyperlink{class_edge_a40fc1470c5339203defca19b67c2535b}{getOrig}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ \doxymbox{\hyperlink{class_edge_af1e165b1eab870894d04e3ea76330f5d}{Edge<T>}}*\ \doxymbox{\hyperlink{class_edge_af0a900f3006e47b9f363df7429298eeb}{getReverse}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_edge_a1bc84542b5c2a6a8ed110037854a76e0}{setReverse}}(\doxymbox{\hyperlink{class_edge_af1e165b1eab870894d04e3ea76330f5d}{Edge<T>}}*\ rev);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_edge_ac83ea71b94a8f24f1c82119889171241}{getCapacity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_edge_a75458cfc838ca5aee5c34cb9f03b5647}{getFlow}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_edge_a1819116e2c156733a14bbd94cc27908e}{setFlow}}(\textcolor{keywordtype}{double}\ flow);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ \ \ \doxymbox{\hyperlink{class_vertex}{Vertex<T>}}*\ orig;}
+\DoxyCodeLine{00047\ \ \ \ \ \doxymbox{\hyperlink{class_vertex}{Vertex<T>}}*\ dest;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{double}\ capacity;\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{double}\ flow;\ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \doxymbox{\hyperlink{class_edge_af1e165b1eab870894d04e3ea76330f5d}{Edge<T>}}*\ reverse\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00054\ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00057\ \doxymbox{\hyperlink{class_edge_af1e165b1eab870894d04e3ea76330f5d}{Edge<T>::Edge}}(\doxymbox{\hyperlink{class_vertex}{Vertex<T>}}*\ orig,\ \doxymbox{\hyperlink{class_vertex}{Vertex<T>}}*\ dest,\ \textcolor{keywordtype}{double}\ capacity)\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ this-\/>orig\ =\ orig;}
+\DoxyCodeLine{00059\ \ \ \ \ this-\/>dest\ =\ dest;}
+\DoxyCodeLine{00060\ \ \ \ \ this-\/>capacity\ =\ capacity;}
+\DoxyCodeLine{00061\ \ \ \ \ this-\/>flow\ =\ 0;}
+\DoxyCodeLine{00062\ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00065\ \doxymbox{\hyperlink{class_vertex}{Vertex<T>}}*\ \doxymbox{\hyperlink{class_edge_a9a2de066dff8513dd788d553fc1d0c81}{Edge<T>::getDest}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ dest;\ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00068\ \doxymbox{\hyperlink{class_vertex}{Vertex<T>}}*\ \doxymbox{\hyperlink{class_edge_a40fc1470c5339203defca19b67c2535b}{Edge<T>::getOrig}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ orig;\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00071\ \doxymbox{\hyperlink{class_edge_af1e165b1eab870894d04e3ea76330f5d}{Edge<T>}}*\ \doxymbox{\hyperlink{class_edge_af0a900f3006e47b9f363df7429298eeb}{Edge<T>::getReverse}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ reverse;\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00074\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_edge_a1bc84542b5c2a6a8ed110037854a76e0}{Edge<T>::setReverse}}(\doxymbox{\hyperlink{class_edge_af1e165b1eab870894d04e3ea76330f5d}{Edge<T>}}*\ rev)\ \{\ reverse\ =\ rev;\ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00077\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_edge_ac83ea71b94a8f24f1c82119889171241}{Edge<T>::getCapacity}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ capacity;\ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00080\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_edge_a75458cfc838ca5aee5c34cb9f03b5647}{Edge<T>::getFlow}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ flow;\ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00083\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_edge_a1819116e2c156733a14bbd94cc27908e}{Edge<T>::setFlow}}(\textcolor{keywordtype}{double}\ flow)\ \{\ this-\/>flow\ =\ flow;\ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

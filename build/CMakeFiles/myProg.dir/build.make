@@ -76,57 +76,57 @@ CMakeFiles/myProg.dir/src/App.cpp.o: CMakeFiles/myProg.dir/flags.make
 CMakeFiles/myProg.dir/src/App.cpp.o: /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/App.cpp
 CMakeFiles/myProg.dir/src/App.cpp.o: CMakeFiles/myProg.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/myProg.dir/src/App.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myProg.dir/src/App.cpp.o -MF CMakeFiles/myProg.dir/src/App.cpp.o.d -o CMakeFiles/myProg.dir/src/App.cpp.o -c /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/App.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myProg.dir/src/App.cpp.o -MF CMakeFiles/myProg.dir/src/App.cpp.o.d -o CMakeFiles/myProg.dir/src/App.cpp.o -c /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/App.cpp
 
 CMakeFiles/myProg.dir/src/App.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/myProg.dir/src/App.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/App.cpp > CMakeFiles/myProg.dir/src/App.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/App.cpp > CMakeFiles/myProg.dir/src/App.cpp.i
 
 CMakeFiles/myProg.dir/src/App.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myProg.dir/src/App.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/App.cpp -o CMakeFiles/myProg.dir/src/App.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/App.cpp -o CMakeFiles/myProg.dir/src/App.cpp.s
 
 CMakeFiles/myProg.dir/src/Menu.cpp.o: CMakeFiles/myProg.dir/flags.make
 CMakeFiles/myProg.dir/src/Menu.cpp.o: /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/Menu.cpp
 CMakeFiles/myProg.dir/src/Menu.cpp.o: CMakeFiles/myProg.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/myProg.dir/src/Menu.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myProg.dir/src/Menu.cpp.o -MF CMakeFiles/myProg.dir/src/Menu.cpp.o.d -o CMakeFiles/myProg.dir/src/Menu.cpp.o -c /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/Menu.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myProg.dir/src/Menu.cpp.o -MF CMakeFiles/myProg.dir/src/Menu.cpp.o.d -o CMakeFiles/myProg.dir/src/Menu.cpp.o -c /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/Menu.cpp
 
 CMakeFiles/myProg.dir/src/Menu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/myProg.dir/src/Menu.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/Menu.cpp > CMakeFiles/myProg.dir/src/Menu.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/Menu.cpp > CMakeFiles/myProg.dir/src/Menu.cpp.i
 
 CMakeFiles/myProg.dir/src/Menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myProg.dir/src/Menu.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/Menu.cpp -o CMakeFiles/myProg.dir/src/Menu.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/Menu.cpp -o CMakeFiles/myProg.dir/src/Menu.cpp.s
 
 CMakeFiles/myProg.dir/src/Parser.cpp.o: CMakeFiles/myProg.dir/flags.make
 CMakeFiles/myProg.dir/src/Parser.cpp.o: /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/Parser.cpp
 CMakeFiles/myProg.dir/src/Parser.cpp.o: CMakeFiles/myProg.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/myProg.dir/src/Parser.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myProg.dir/src/Parser.cpp.o -MF CMakeFiles/myProg.dir/src/Parser.cpp.o.d -o CMakeFiles/myProg.dir/src/Parser.cpp.o -c /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/Parser.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myProg.dir/src/Parser.cpp.o -MF CMakeFiles/myProg.dir/src/Parser.cpp.o.d -o CMakeFiles/myProg.dir/src/Parser.cpp.o -c /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/Parser.cpp
 
 CMakeFiles/myProg.dir/src/Parser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/myProg.dir/src/Parser.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/Parser.cpp > CMakeFiles/myProg.dir/src/Parser.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/Parser.cpp > CMakeFiles/myProg.dir/src/Parser.cpp.i
 
 CMakeFiles/myProg.dir/src/Parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myProg.dir/src/Parser.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/Parser.cpp -o CMakeFiles/myProg.dir/src/Parser.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/Parser.cpp -o CMakeFiles/myProg.dir/src/Parser.cpp.s
 
 CMakeFiles/myProg.dir/src/main.cpp.o: CMakeFiles/myProg.dir/flags.make
 CMakeFiles/myProg.dir/src/main.cpp.o: /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/main.cpp
 CMakeFiles/myProg.dir/src/main.cpp.o: CMakeFiles/myProg.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/myProg.dir/src/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myProg.dir/src/main.cpp.o -MF CMakeFiles/myProg.dir/src/main.cpp.o.d -o CMakeFiles/myProg.dir/src/main.cpp.o -c /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/main.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myProg.dir/src/main.cpp.o -MF CMakeFiles/myProg.dir/src/main.cpp.o.d -o CMakeFiles/myProg.dir/src/main.cpp.o -c /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/main.cpp
 
 CMakeFiles/myProg.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/myProg.dir/src/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/main.cpp > CMakeFiles/myProg.dir/src/main.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/main.cpp > CMakeFiles/myProg.dir/src/main.cpp.i
 
 CMakeFiles/myProg.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myProg.dir/src/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/main.cpp -o CMakeFiles/myProg.dir/src/main.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/andrerocha/Desktop/DA2026_PRJ1_T06_G/src/main.cpp -o CMakeFiles/myProg.dir/src/main.cpp.s
 
 # Object files for target myProg
 myProg_OBJECTS = \

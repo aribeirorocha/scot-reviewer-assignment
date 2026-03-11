@@ -1,0 +1,43 @@
+\doxysection{src/\+\+Models.h File Reference}
+\hypertarget{_models_8h}{}\label{_models_8h}\index{src/Models.h@{src/Models.h}}
+
+
+Definição das estruturas de dados fundamentais do sistema SCOT.  
+
+
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+Include dependency graph for Models.\+h:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{_models_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{_models_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_submission}{Submission}}
+\begin{DoxyCompactList}\small\item\em Representa um artigo científico submetido para revisão. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_reviewer}{Reviewer}}
+\begin{DoxyCompactList}\small\item\em Representa um perito (revisor) disponível para avaliar artigos. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_config_params}{Config\+Params}}
+\begin{DoxyCompactList}\small\item\em Estrutura de controlo para os parâmetros de execução e algoritmos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definição das estruturas de dados fundamentais do sistema SCOT. 
+
+
+\begin{DoxyItemize}
+\item Este ficheiro contém as estruturas (structs) que representam as entidades do domínio do problema:\+ Submissões (artigos), Revisores e Parâmetros de Configuração. Sendo estruturas de dados simples (POD -\/ Plain Old Data), a sua complexidade de acesso é O(1). 
+\end{DoxyItemize}

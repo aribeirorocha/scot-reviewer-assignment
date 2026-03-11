@@ -1,10 +1,25 @@
+/**
+ * @file Menu.cpp
+ * @brief Implementação da interface de utilizador (Menu) do sistema.
+ * * Contém a lógica para exibição de menus, tratamento de input e redirecionamento
+ * de comandos para a lógica de negócio na classe App.
+ */
+
 #include "Menu.h"
 #include <iostream>
 #include <limits>
 #include <string>
 
+/**
+ * @brief Construtor padrão do Menu.
+ */
 
 Menu::Menu() { }
+/**
+ * @brief Inicia o loop do menu interativo no terminal.
+ * * @details Complexidade Temporal: O(N * C), onde N é o número de interações do utilizador
+ * e C é a complexidade da opção escolhida em cada iteração.
+ */
 
 void Menu::runInteractive() {
     bool running = true;
@@ -25,6 +40,10 @@ void Menu::runInteractive() {
     }
 }
 
+/**
+ * @brief Exibe as opções textuais do menu.
+ * @details Complexidade Temporal: O(1).
+ */
 
 void Menu::displayOptions() const {
     std::cout << "\n=========================================\n";
@@ -38,6 +57,15 @@ void Menu::displayOptions() const {
     std::cout << "-----------------------------------------\n";
     std::cout << "Escolha uma opcao: ";
 }
+/**
+ * @brief Processa a escolha do utilizador e executa a ação correspondente.
+ * * @param choice Inteiro que representa a opção selecionada.
+ * @return true se o programa deve continuar, false se deve encerrar.
+ * * @details Complexidade Temporal: Depende da opção:
+ * - Caso 1: O(L * C + S + R) - Leitura de ficheiro e setup do grafo.
+ * - Caso 2: O(S) - Listagem de submissões.
+ * - Outros casos: Atualmente O(1).
+ */
 
 
 bool Menu::handleChoice(int choice) {
@@ -100,6 +128,13 @@ bool Menu::handleChoice(int choice) {
     }
     return true;
 }
+
+/**
+ * @brief Executa o processamento automático sem intervenção do utilizador.
+ * * @param inputFile Caminho do ficheiro CSV de entrada.
+ * @param riskFile Caminho do ficheiro de saída para análise de risco (opcional).
+ * * @details Complexidade Temporal: O(L * C + S + R) para carregar os dados.
+ */
 
 
 void Menu::runBatch(const std::string& inputFile, const std::string& riskFile) {

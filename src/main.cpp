@@ -1,6 +1,23 @@
+/**
+ * @file main.cpp
+ * @brief Ponto de entrada da aplicação Scientific Conference Organization Tool.
+ * * Este ficheiro contém a função main que gere o arranque do programa, 
+ * permitindo a execução em modo interativo (via menu) ou modo batch 
+ * (via linha de comandos com argumentos).
+ */
 #include <iostream>
 #include <string>
 #include "Menu.h"
+
+/**
+ * @brief Função principal do programa.
+ * * Analisa os argumentos da linha de comandos para decidir o modo de execução.
+ * * @param argc Contador de argumentos da linha de comandos.
+ * @param argv Vetor de strings contendo os argumentos da linha de comandos.
+ * @return int Retorna 0 em caso de sucesso e 1 em caso de erro de argumentos.
+ * * @details Complexidade Temporal: O(1) para a verificação de argumentos, 
+ * seguida da complexidade do modo de execução escolhido.
+ */
 
 int main(int argc, char* argv[]) {
     Menu menu;

@@ -1,0 +1,19 @@
+<map id="src/Models.h" name="src/Models.h">
+<area shape="rect" id="Node000001" title="Definição das estruturas de dados fundamentais do sistema SCOT." alt="" coords="78,5,174,31"/>
+<area shape="rect" id="Node000002" href="$_app_8h.html" title="Definição da classe App, que atua como o controlador principal do sistema." alt="" coords="48,153,126,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,43,112,80,93,153,88,151,107,78,118,48"/>
+<area shape="rect" id="Node000007" href="$_parser_8h.html" title="Definição da classe Parser para processamento de ficheiros de configuração." alt="" coords="121,79,213,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="140,42,163,78,157,79,140,47"/>
+<area shape="rect" id="Node000003" href="$_app_8cpp.html" title="Implementação da classe App, que gere a lógica principal e a estrutura do grafo." alt="" coords="5,226,97,252"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="76,190,59,227,55,225,73,194"/>
+<area shape="rect" id="Node000004" href="$_menu_8h.html" title="Definição da classe Menu para a interface do utilizador." alt="" coords="121,226,208,252"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="112,187,154,225,149,227,111,192"/>
+<area shape="rect" id="Node000005" href="$_menu_8cpp.html" title="Implementação da interface de utilizador (Menu) do sistema." alt="" coords="53,300,153,326"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="147,263,115,302,112,297,142,265"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html" title="Ponto de entrada da aplicação Scientific Conference Organization Tool." alt="" coords="178,300,274,326"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="185,261,218,300,213,299,183,266"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="141,117,102,154,98,151,144,113"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="168,118,167,226,162,225,165,122"/>
+<area shape="rect" id="Node000008" href="$_parser_8cpp.html" title="Implementação da classe Parser responsável pelo processamento de ficheiros CSV." alt="" coords="202,153,308,178"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="194,112,243,152,238,153,193,117"/>
+</map>

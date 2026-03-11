@@ -1,0 +1,21 @@
+<map id="src/Parser.cpp" name="src/Parser.cpp">
+<area shape="rect" id="Node000001" title="Implementação da classe Parser responsável pelo processamento de ficheiros CSV." alt="" coords="202,5,307,31"/>
+<area shape="rect" id="Node000002" href="$_parser_8h.html" title="Definição da classe Parser para processamento de ficheiros de configuração." alt="" coords="37,79,107,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="222,34,118,75,116,71,225,29"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="131,79,197,105"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="237,33,193,72,189,67,241,30"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="220,79,289,105"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="256,29,257,64,252,62,253,34"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="312,79,384,105"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="271,29,323,69,318,70,270,34"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="408,79,482,105"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="287,29,401,72,396,74,287,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,226,59,252"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="56,108,40,127,25,154,21,183,26,211,20,211,16,183,20,152,36,124,59,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="101,226,158,252"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="86,103,107,124,124,152,132,182,133,212,128,210,126,182,119,154,103,128,86,108"/>
+<area shape="rect" id="Node000005" href="$_models_8h.html" title="Definição das estruturas de dados fundamentais do sistema SCOT." alt="" coords="35,153,109,178"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="73,102,75,137,69,136,71,107"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="68,177,48,214,44,211,63,180"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="83,176,113,214,107,214,80,181"/>
+</map>

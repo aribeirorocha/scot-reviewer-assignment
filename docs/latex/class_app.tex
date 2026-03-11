@@ -1,0 +1,127 @@
+\doxysection{App Class Reference}
+\hypertarget{class_app}{}\label{class_app}\index{App@{App}}
+
+
+Classe central que gere a lógica de negócio e as estruturas de dados do projeto.  
+
+
+
+
+{\ttfamily \+\#include $<$App.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_app_a4226c4a6f90666cc8a8c36d7e832d885}{App}} ()=default
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{class_app}{App}. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_app_a4e248bd07a134c9de629fe9a2790d246}{load\+Data}} (const std::\+string \&filename)
+\begin{DoxyCompactList}\small\item\em Carrega os dados de um ficheiro CSV e desencadeia a construção do grafo. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_parser}{Parser}} \& \doxymbox{\hyperlink{class_app_ab1e0b617e1988694452338079cbbf212}{get\+Parser}} () const
+\begin{DoxyCompactList}\small\item\em Obtém uma referência constante para o objeto \doxylink{class_parser}{Parser}. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_graph}{Graph}}$<$ int $>$ \& \doxymbox{\hyperlink{class_app_a484d73d983b1898bf4a28a94cd0989eb}{get\+Graph}} () const
+\begin{DoxyCompactList}\small\item\em Obtém uma referência constante para o Grafo master. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe central que gere a lógica de negócio e as estruturas de dados do projeto. 
+
+\label{doc-constructors}
+\Hypertarget{class_app_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_app_a4226c4a6f90666cc8a8c36d7e832d885}\index{App@{App}!App@{App}}
+\index{App@{App}!App@{App}}
+\doxysubsubsection{\texorpdfstring{App()}{App()}}
+{\footnotesize\ttfamily \label{class_app_a4226c4a6f90666cc8a8c36d7e832d885} 
+App::\+\+App (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtor padrão da classe \doxylink{class_app}{App}. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_app_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_app_a484d73d983b1898bf4a28a94cd0989eb}\index{App@{App}!getGraph@{getGraph}}
+\index{getGraph@{getGraph}!App@{App}}
+\doxysubsubsection{\texorpdfstring{getGraph()}{getGraph()}}
+{\footnotesize\ttfamily \label{class_app_a484d73d983b1898bf4a28a94cd0989eb} 
+const \doxymbox{\hyperlink{class_graph}{Graph}}$<$ int $>$ \& App::\+get\+Graph (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém uma referência constante para o Grafo master. 
+
+\begin{DoxyReturn}{Returns}
+Const referência para o objeto \doxylink{class_graph}{Graph$<$int$>$}.
+\end{DoxyReturn}
+Complexidade Temporal:\+ O(1). \Hypertarget{class_app_ab1e0b617e1988694452338079cbbf212}\index{App@{App}!getParser@{getParser}}
+\index{getParser@{getParser}!App@{App}}
+\doxysubsubsection{\texorpdfstring{getParser()}{getParser()}}
+{\footnotesize\ttfamily \label{class_app_ab1e0b617e1988694452338079cbbf212} 
+const \doxymbox{\hyperlink{class_parser}{Parser}} \& App::\+get\+Parser (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém uma referência constante para o objeto \doxylink{class_parser}{Parser}. 
+
+\begin{DoxyReturn}{Returns}
+Const referência para o \doxylink{class_parser}{Parser}.
+\end{DoxyReturn}
+Complexidade Temporal:\+ O(1). \Hypertarget{class_app_a4e248bd07a134c9de629fe9a2790d246}\index{App@{App}!loadData@{loadData}}
+\index{loadData@{loadData}!App@{App}}
+\doxysubsubsection{\texorpdfstring{loadData()}{loadData()}}
+{\footnotesize\ttfamily \label{class_app_a4e248bd07a134c9de629fe9a2790d246} 
+bool App::\+load\+Data (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Carrega os dados de um ficheiro CSV e desencadeia a construção do grafo. 
+
+Carrega os dados do ficheiro fornecido e inicializa a estrutura do grafo.
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Caminho relativo ou absoluto para o ficheiro .csv de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o ficheiro foi lido e os dados carregados com sucesso, false caso contrário.
+\end{DoxyReturn}
+
+\item 
+\end{DoxyItemize}
+
+Complexidade Temporal:\+ O(N \texorpdfstring{$\ast$}{*} M + S + R), onde N é o número de linhas, M o comprimento das linhas, S o número de submissões e R o de revisores.
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Caminho para o ficheiro CSV de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se o ficheiro foi lido e o grafo construído com sucesso. 
+
+false Se ocorreu um erro na leitura do ficheiro.
+\end{DoxyReturn}
+
+\item 
+\end{DoxyItemize}
+
+Complexidade Temporal:\+ O(N \texorpdfstring{$\ast$}{*} M + S + R), onde:\+
+\begin{DoxyItemize}
+\item N é o número de linhas no ficheiro.
+\item M é o comprimento médio de cada linha.
+\item S é o número de submissões.
+\item R é o número de revisores. 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+src/\+\doxymbox{\hyperlink{_app_8h}{App.\+h}}\item 
+src/\+\doxymbox{\hyperlink{_app_8cpp}{App.\+cpp}}\end{DoxyCompactItemize}

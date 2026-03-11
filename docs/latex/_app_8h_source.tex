@@ -1,0 +1,42 @@
+\doxysection{App.\+h}
+\hypertarget{_app_8h_source}{}\label{_app_8h_source}\index{src/App.h@{src/App.h}}
+\doxymbox{\hyperlink{_app_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ APP\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ APP\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_graph_8h}{Graph.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_parser_8h}{Parser.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_models_8h}{Models.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_app_a4226c4a6f90666cc8a8c36d7e832d885}{App}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \doxymbox{\hyperlink{class_app_a4226c4a6f90666cc8a8c36d7e832d885}{App}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00034\ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Carrega\ o\ ficheiro\ e\ constrói\ o\ Grafo\ inicial}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_app_a4e248bd07a134c9de629fe9a2790d246}{loadData}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ Getters\ para\ o\ Menu\ consultar}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_parser}{Parser}}\&\ \doxymbox{\hyperlink{class_app_ab1e0b617e1988694452338079cbbf212}{getParser}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ parser;\ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_graph}{Graph<int>}}\&\ \doxymbox{\hyperlink{class_app_a484d73d983b1898bf4a28a94cd0989eb}{getGraph}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ masterGraph;\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00057\ \ \ \ \ \doxymbox{\hyperlink{class_parser}{Parser}}\ parser;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00060\ \ \ \ \ \doxymbox{\hyperlink{class_graph}{Graph<int>}}\ masterGraph;}
+\DoxyCodeLine{00061\ \ \ \ \ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ Constrói\ a\ estrutura\ do\ grafo\ com\ base\ nos\ dados\ lidos}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ buildInitialGraph();}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,22 @@
+<map id="src/App.h" name="src/App.h">
+<area shape="rect" id="Node000001" title="Definição da classe App, que atua como o controlador principal do sistema." alt="" coords="175,5,252,31"/>
+<area shape="rect" id="Node000002" href="$_graph_8h.html" title="Definição da classe genérica Graph para representação de grafos." alt="" coords="79,79,146,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,34,144,72,141,68,198,30"/>
+<area shape="rect" id="Node000006" href="$_parser_8h.html" title="Definição da classe Parser para processamento de ficheiros de configuração." alt="" coords="179,79,248,105"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="215,29,216,64,211,62,213,34"/>
+<area shape="rect" id="Node000008" href="$_models_8h.html" title="Definição das estruturas de dados fundamentais do sistema SCOT." alt="" coords="251,153,326,178"/>
+<area shape="poly" id="edge12_Node000001_Node000008" title=" " alt="" coords="226,29,245,51,263,78,276,108,285,138,280,137,271,110,258,80,241,54,225,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="117,226,174,252"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="117,103,142,211,137,211,113,107"/>
+<area shape="rect" id="Node000004" href="$_vertex_8h.html" title="Definição da classe Vertex (Vértice) para a estrutura de grafo." alt="" coords="5,153,76,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="99,107,66,143,62,140,102,103"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="59,176,118,216,113,219,58,181"/>
+<area shape="rect" id="Node000005" href="$_edge_8h.html" title="Definição da classe Edge (Aresta) para a estrutura de grafo." alt="" coords="9,226,72,252"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="42,176,43,211,38,210,39,181"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="211,104,160,214,156,211,206,106"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="203,226,256,252"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="217,103,229,212,224,210,213,107"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="227,103,268,142,263,142,226,108"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="267,178,185,221,183,216,262,179"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="281,177,251,217,248,212,276,180"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="src/Vertex.h" name="src/Vertex.h">
+<area shape="rect" id="Node000001" title="Definição da classe Vertex (Vértice) para a estrutura de grafo." alt="" coords="61,5,153,31"/>
+<area shape="rect" id="Node000002" href="$_graph_8h.html" title="Definição da classe genérica Graph para representação de grafos." alt="" coords="62,79,152,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,44,110,79,104,78,106,49"/>
+<area shape="rect" id="Node000003" href="$_app_8h.html" title="Definição da classe App, que atua como o controlador principal do sistema." alt="" coords="68,153,146,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="108,118,110,153,104,152,106,123"/>
+<area shape="rect" id="Node000004" href="$_app_8cpp.html" title="Implementação da classe App, que gere a lógica principal e a estrutura do grafo." alt="" coords="5,226,97,252"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,193,63,227,58,224,90,188"/>
+<area shape="rect" id="Node000005" href="$_menu_8h.html" title="Definição da classe Menu para a interface do utilizador." alt="" coords="121,226,208,252"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="127,188,157,226,152,226,125,193"/>
+<area shape="rect" id="Node000006" href="$_menu_8cpp.html" title="Implementação da interface de utilizador (Menu) do sistema." alt="" coords="53,300,153,326"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="147,263,115,302,112,297,142,265"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html" title="Ponto de entrada da aplicação Scientific Conference Organization Tool." alt="" coords="178,300,274,326"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="185,261,218,300,213,299,183,266"/>
+</map>

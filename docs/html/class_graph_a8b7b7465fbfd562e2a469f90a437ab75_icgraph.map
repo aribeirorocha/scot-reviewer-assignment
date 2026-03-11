@@ -1,0 +1,9 @@
+<map id="Graph::findVertex" name="Graph::findVertex">
+<area shape="rect" id="Node000001" title="Procura um vértice no grafo com base na informação fornecida." alt="" coords="240,55,363,80"/>
+<area shape="rect" id="Node000002" href="$class_graph.html#aa0035436ebb5e4b416f2d9c24a3c4bb8" title="Adiciona uma aresta e a sua correspondente reversa para grafos de fluxo." alt="" coords="5,5,192,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,51,154,34,155,29,233,49"/>
+<area shape="rect" id="Node000003" href="$class_graph.html#a4f348e397ed1311844932f326360a0fa" title="Adiciona uma aresta direcionada entre dois vértices." alt="" coords="41,55,156,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="222,68,157,70,157,65,227,67"/>
+<area shape="rect" id="Node000004" href="$class_graph.html#a00be284ea2be3b3d0f0d2e493b70245b" title="Adiciona um novo vértice ao grafo." alt="" coords="37,104,160,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="233,84,155,106,154,101,228,85"/>
+</map>

@@ -1,3 +1,9 @@
+/**
+ * @file Parser.cpp
+ * @brief Implementação da classe Parser responsável pelo processamento de ficheiros CSV.
+ * * Contém a lógica para leitura linha-a-linha, filtragem de comentários e 
+ * conversão de strings para as estruturas de dados do domínio (Submissões, Revisores).
+ */
 #include "Parser.h"
 #include <fstream>
 #include <sstream>
@@ -5,6 +11,12 @@
 #include <algorithm>
 
 // Auxiliar para remover espaços em branco no início e no fim
+/**
+ * @brief Remove espaços em branco, tabulações e quebras de linha das extremidades de uma string.
+ * @param str String original a ser limpa.
+ * @return std::string String resultante sem espaços nas extremidades.
+ * @details Complexidade Temporal: O(N), onde N é o comprimento da string.
+ */
 std::string Parser::trim(const std::string& str) {
     size_t first = str.find_first_not_of(" \t\r\n");
     if (first == std::string::npos) return "";
@@ -12,7 +24,12 @@ std::string Parser::trim(const std::string& str) {
     return str.substr(first, (last - first + 1));
 }
 
-// Auxiliar para remover aspas ("") de títulos e ficheiros
+/**
+ * @brief Remove aspas duplas envolventes de uma string, se existirem.
+ * @param str String a processar.
+ * @return std::string String sem aspas.
+ * @details Complexidade Temporal: O(N), onde N é o comprimento da string.
+ */
 std::string Parser::removeQuotes(const std::string& str) {
     std::string s = trim(str);
     if (s.length() >= 2 && s.front() == '"' && s.back() == '"') {
@@ -20,7 +37,17 @@ std::string Parser::removeQuotes(const std::string& str) {
     }
     return s;
 }
-
+/**
+ * @brief Motor principal de parsing que lê o ficheiro CSV e popula as listas de dados.
+ * * O método utiliza uma máquina de estados simples baseada na variável currentSection 
+ * para distinguir entre blocos de Submissões, Revisores e Parâmetros.
+ * * @param filename Caminho para o ficheiro CSV.
+ * @return true Se o ficheiro foi processado com sucesso, false caso contrário.
+ * * @details Complexidade Temporal: O(L * C), onde:
+ * - L é o número total de linhas no ficheiro.
+ * - C é o número médio de caracteres/colunas por linha.
+ * Cada linha é lida uma única vez e processada sequencialmente.
+ */
 bool Parser::parseFile(const std::string& filename) {
     submissions.clear();
     reviewers.clear();

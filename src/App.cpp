@@ -7,6 +7,7 @@
 #include "Graph.h"
 #include <iostream>
 #include <fstream>
+#include "Parser.h"
 
 /**
  * @brief Carrega os dados do ficheiro fornecido e inicializa a estrutura do grafo.
@@ -79,5 +80,12 @@ void App::solveT21() {
     }
 
     double total = flowGraph.edmondsKarp(s, t);
-    std::cout << "\n[T2.1] Sucesso! Total de atribuicoes: " << total << std::endl;
+    int required = params.minReviewsPerSubmission * (int)parser.getSubmissions().size();
+
+    if (total >= required) {
+        std::cout << "\nSucesso! Total de atribuicoes: " << total << std::endl;
+    } else {
+        std::cout << "\nFalha! Atribuicoes conseguidas: " << total
+                  << " / " << required << " necessarias." << std::endl;
+    }
 }

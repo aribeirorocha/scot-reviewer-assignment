@@ -137,7 +137,7 @@ std::vector<Vertex<T>*> Graph<T>::getVertexSet() const {
 
 // Adiciona este método auxiliar também
 template <class T>
-bool bfs(Vertex<T>* s, Vertex<T>* t) {
+bool Graph<T>::bfs(Vertex<T>* s, Vertex<T>* t) {
     for (auto v : vertexSet) v->setVisited(false);
     std::queue<Vertex<T>*> q;
     q.push(s);
@@ -156,7 +156,7 @@ bool bfs(Vertex<T>* s, Vertex<T>* t) {
     return false;
 }
 template <class T>
-double edmondsKarp(T source, T target) {
+double Graph<T>::edmondsKarp(T source, T target) {
     Vertex<T> *s = findVertex(source);
     Vertex<T> *t = findVertex(target);
     if (s == nullptr || t == nullptr) return 0;

@@ -33,6 +33,7 @@ public:
      */
     
     void solveT21();
+    void SolveRisk1();
     // Carrega o ficheiro e constrói o Grafo inicial
     bool loadData(const std::string& filename);
 
@@ -69,6 +70,8 @@ private:
 
     // Constrói a estrutura do grafo com base nos dados lidos
     void buildInitialGraph();
+
+    double runFlow(std::vector<int> excludeIds = {});
     
 };
 

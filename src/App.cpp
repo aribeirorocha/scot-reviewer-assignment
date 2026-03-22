@@ -51,33 +51,76 @@ void App::buildInitialGraph() {
     std::cout << "[Grafo] Vertices criados: " << masterGraph.getVertexSet().size() << std::endl;
 }
 
-void App::solveT21() {
+double App::runFlow(std::vector<int> excludeIds) {
+    auto params = parser.getParams();
+    int s = -1, t = -2;
+
     Graph<int> flowGraph;
-    int s = -1, t = -2; // IDs para Super-Source e Super-Sink
     flowGraph.addVertex(s);
     flowGraph.addVertex(t);
 
-    auto params = parser.getParams();
-    
-    // Conectar Source às Submissões
+    for (auto& rev : parser.getReviewers()) {
+        if (std::find(excludeIds.begin(), excludeIds.end(), rev.id) != excludeIds.end()) continue;
+        flowGraph.addVertex(rev.id);
+        flowGraph.addBidirectionalEdge(rev.id, t, params.maxReviewsPerReviewer);
+    }
     for (auto& sub : parser.getSubmissions()) {
         flowGraph.addVertex(sub.id);
-        flowGraph.addEdge(s, sub.id, params.minReviewsPerSubmission);
-        
-        // Conectar Submissão aos Revisores com o mesmo domínio primário
+        flowGraph.addBidirectionalEdge(s, sub.id, params.minReviewsPerSubmission);
         for (auto& rev : parser.getReviewers()) {
+            if (std::find(excludeIds.begin(), excludeIds.end(), rev.id) != excludeIds.end()) continue;
             if (sub.primaryDomain == rev.primaryExpertise) {
-                flowGraph.addVertex(rev.id);
-                flowGraph.addEdge(sub.id, rev.id, 1);
+                flowGraph.addBidirectionalEdge(sub.id, rev.id, 1);
             }
         }
     }
 
-    // Conectar Revisores ao Sink
-    for (auto& rev : parser.getReviewers()) {
-        flowGraph.addEdge(rev.id, t, params.maxReviewsPerReviewer);
+    return flowGraph.edmondsKarp(s, t);
+}
+
+void App::solveT21() {
+    auto params = parser.getParams();
+    int required = params.minReviewsPerSubmission * (int)parser.getSubmissions().size();
+
+    double total = runFlow(); // no exclusions
+
+    if (total >= required) {
+        std::cout << "\nSucesso! Total de atribuicoes: " << total << std::endl;
+    } else {
+        std::cout << "\nFalha! Atribuicoes conseguidas: " << total
+                  << " / " << required << " necessarias." << std::endl;
+    }
+}
+
+void App::SolveRisk1() {
+    auto params = parser.getParams();
+    int required = params.minReviewsPerSubmission * (int)parser.getSubmissions().size();
+
+    double baseFlow = runFlow(); // no exclusions
+    if (baseFlow < required) {
+        std::cout << "\n[Risk Analysis 1] Base assignment already impossible, skipping risk analysis.\n";
+        return;
     }
 
-    double total = flowGraph.edmondsKarp(s, t);
-    std::cout << "\n[T2.1] Sucesso! Total de atribuicoes: " << total << std::endl;
+    std::cout << "\n[Risk Analysis 1] Base assignment feasible (" << baseFlow << " assignments).\n";
+    std::cout << "Checking which reviewers are critical...\n";
+
+    std::vector<int> riskyReviewers;
+
+    for (auto& rev : parser.getReviewers()) {
+        double flow = runFlow({rev.id}); // exclude this reviewer
+        if (flow < required) {
+            riskyReviewers.push_back(rev.id);
+        }
+    }
+
+    std::cout << "\n#Risk Analysis: 1\n";
+    if (riskyReviewers.empty()) {
+        std::cout << "No critical reviewers found. Assignment is robust.\n";
+    } else {
+        std::cout << "Critical reviewers (removing any one makes assignment impossible):\n";
+        for (int id : riskyReviewers) {
+            std::cout << id << "\n";
+        }
+    }
 }

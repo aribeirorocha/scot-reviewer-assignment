@@ -32,14 +32,15 @@ class Menu {
      * @details Complexidade Temporal: O(N), onde N é o número de interações.
      */
     void runInteractive ();
+
     /**
      * @brief Executa o programa em modo batch (processamento automático).
      * * @param inputFile Caminho para o ficheiro CSV de entrada.
      * @param riskFile Caminho para o ficheiro de saída da análise de risco (opcional).
-     * @details Complexidade Temporal: O(L + R + S), onde L é o tamanho do ficheiro, 
+     * @details Complexidade Temporal: O(L + R + S), onde L é o tamanho do ficheiro,
      * R o número de revisores e S o número de submissões.
      */
-    void runBatch (const std::string& inputFile, const std::string& riskFile);
+    void runBatch(const std::string &inputFile, const std::string &riskFile);
 
     private:
     /** @brief Instância da classe App que gere os dados e o grafo. */

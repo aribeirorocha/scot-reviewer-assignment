@@ -114,8 +114,13 @@ bool Menu::handleChoice(int choice) {
             break;
         }
         case 3:
-    app.solveT21();
-    break;
+            app.solveT21();
+            break;
+
+        case 4: {
+            app.SolveRisk1();
+            break;
+    }
     }
     return true;
 }
@@ -130,7 +135,7 @@ bool Menu::handleChoice(int choice) {
 
 void Menu::runBatch(const std::string& inputFile, const std::string& riskFile) {
     std::cout << "[Batch Mode] A iniciar processamento de: " << inputFile << std::endl;
-    
+
     if (app.loadData(inputFile)) {
         std::cout << "[Batch Mode] Dados carregados. Gerando outputs...\n";
         // Futuramente: app.executeMaxFlow();

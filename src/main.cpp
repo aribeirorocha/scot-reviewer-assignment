@@ -11,11 +11,11 @@
 
 /**
  * @brief Função principal do programa.
- * * Analisa os argumentos da linha de comandos para decidir o modo de execução.
- * * @param argc Contador de argumentos da linha de comandos.
+ * Analisa os argumentos da linha de comandos para decidir o modo de execução.
+ * @param argc Contador de argumentos da linha de comandos.
  * @param argv Vetor de strings contendo os argumentos da linha de comandos.
  * @return int Retorna 0 em caso de sucesso e 1 em caso de erro de argumentos.
- * * @details Complexidade Temporal: O(1) para a verificação de argumentos, 
+ * @details Complexidade Temporal: O(1) para a verificação de argumentos, 
  * seguida da complexidade do modo de execução escolhido.
  */
 

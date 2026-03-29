@@ -1,7 +1,7 @@
 /**
  * @file Models.h
  * @brief Definição das estruturas de dados fundamentais do sistema SCOT.
- * * Este ficheiro contém as estruturas (structs) que representam as entidades do domínio
+ * Este ficheiro contém as estruturas (structs) que representam as entidades do domínio
  * do problema: Submissões (artigos), Revisores e Parâmetros de Configuração.
  * Sendo estruturas de dados simples (POD - Plain Old Data), a sua complexidade 
  * de acesso é O(1).

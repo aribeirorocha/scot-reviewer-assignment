@@ -141,7 +141,7 @@ bool Menu::handleChoice(int choice) {
                 std::cout << "\n[AVISO] Nenhum dado carregado. Use a opcao 1 primeiro.\n";
                 break;
             }
-            app.solveT21();
+            app.solve();
             break;
         }
 

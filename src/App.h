@@ -47,7 +47,7 @@ public:
     /**
      * @brief Executa a atribuição de revisões (T2.1) manualmente (modo interativo).
      */
-    void solveT21();
+    void solve();
 
     /**
      * @brief Executa a análise de risco = 1 manualmente (modo interativo).

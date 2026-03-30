@@ -246,7 +246,7 @@ void App::solveAutomatic(const std::string& overrideOutput) {
  * Usa o modo definido em GenerateAssignments do ficheiro CSV carregado.
  * @details Complexidade Temporal: O(V * E^2)
  */
-void App::solveT21() {
+void App::solve() {
     auto params = parser.getParams();
     int required = params.minReviewsPerSubmission * (int)parser.getSubmissions().size();
     int mode = (params.generateAssignments == 0) ? 1 : params.generateAssignments;

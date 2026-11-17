@@ -1,61 +1,40 @@
-# Scientific Conference Organization Tool (SCOT)
-**Unidade Curricular:** Desenho de Algoritmos (DA) | 2º Ano, 2º Semestre
-**Faculdade de Engenharia da Universidade do Porto (FEUP)**
-**Ano Letivo:** 2025/2026
+# 📑 SCOT — Scientific Conference Organization Tool
 
----
+![C++](https://img.shields.io/badge/C%2B%2B17-00599C?logo=cplusplus&logoColor=white) ![CMake](https://img.shields.io/badge/CMake-064F8C?logo=cmake&logoColor=white) ![Grade](https://img.shields.io/badge/Grade-19%2F20-brightgreen)
 
-## 1. Descrição do Projeto
-Este projeto consiste no desenvolvimento de uma ferramenta de apoio à organização de conferências científicas. O objetivo principal é automatizar e otimizar a atribuição de revisores a submissões de artigos (manuscritos), garantindo que:
-* Cada artigo é revisto por peritos na área de especialidade correspondente.
-* É respeitado o número mínimo de revisões por artigo (**MinReviewsPerSubmission**).
-* É respeitada a carga máxima de trabalho de cada revisor (**MaxReviewsPerReviewer**).
+A tool that **assigns reviewers to scientific papers** automatically and optimally, respecting each reviewer's area of expertise, the minimum number of reviews per paper and the maximum workload per reviewer.
 
-A solução baseia-se na formulação do problema como uma **Rede de Fluxo Máximo (Max-Flow)**, utilizando algoritmos clássicos de grafos para encontrar a atribuição ótima e realizar análises de risco.
+> Project 1 for **Algorithm Design (DA)** — BSc in Informatics and Computing Engineering (L.EIC), FEUP, 2025/2026. **Final grade: 19/20.**
 
+## 🧠 Approach
+The problem is modelled as a **maximum-flow network**:
 
+`source → papers → reviewers (matching expertise) → sink`
 
-## 2. Estrutura do Projeto
-A organização do código segue uma arquitetura modular para facilitar a manutenção e escalabilidade:
+Edge capacities encode the constraints: *MinReviewsPerSubmission* on the paper edges and *MaxReviewsPerReviewer* on the reviewer edges. The tool solves it with the **Edmonds-Karp** algorithm (BFS-based augmenting paths). A full flow means a valid assignment exists; otherwise the tool reports which papers cannot be covered.
 
-* `src/Models.h`: Definição das estruturas de dados base (`Submission`, `Reviewer`, `ConfigParams`).
-* `src/Parser.h/.cpp`: Motor de leitura e processamento de ficheiros CSV com múltiplas secções.
-* `src/Graph.h`, `Vertex.h`, `Edge.h`: Estrutura de grafos baseada nos materiais das aulas TP, adaptada para suportar fluxos residuais.
-* `src/App.h/.cpp`: Classe gestora (Controller) que orquestra a lógica de negócio e os algoritmos.
-* `src/Menu.h/.cpp`: Interface de utilizador via linha de comandos (CLI).
+## ✨ Features
+- Robust **CSV parser** that handles comments, quotes and multiple sections
+- **Interactive CLI menu** and a **batch mode** for automated runs
+- 14 test datasets with their expected outputs
+- Code documented with **Doxygen**
 
-## 3. Algoritmos Implementados
-* **Parsing e Limpeza:** Algoritmo de processamento de texto para lidar com comentários (`#`), aspas e delimitadores em CSV.
-* **Edmonds-Karp (Max-Flow):** Implementação do algoritmo para resolver o problema de emparelhamento (matching) entre revisores e artigos.
-* **BFS (Breadth-First Search):** Utilizado para encontrar caminhos aumentantes no grafo residual da rede de fluxo.
+## 🏗️ Structure
+`Models` (data) · `Parser` (input) · `Graph/Vertex/Edge` (residual graph) · `App` (controller and algorithms) · `Menu` (CLI)
 
-## 4. Compilação e Execução
-O projeto utiliza o **CMake** para gestão de compilação.
-
-### Pré-requisitos
-* Compilador C++ com suporte a **C++17**.
-* CMake 3.10 ou superior.
-
-### Passo a Passo
-1.  Gerar os ficheiros de build:
-    ```bash
-    cmake -B build
-    ```
-2.  Compilar o projeto:
-    ```bash
-    cmake --build build
-    ```
-3.  Executar o programa:
-    * **Modo Interativo:** `./build/myProg`
-    * **Modo Batch:** `./build/myProg -b data/input.csv risk_output.csv`
-
-## 5. Documentação
-A documentação técnica detalhada, incluindo diagramas de classes e análise de complexidade temporal, pode ser gerada via **Doxygen**:
+## ▶️ How to run
 ```bash
-doxygen Doxyfile
+cmake -S . -B build
+cmake --build build
+./build/myProg            # interactive mode
 ```
 
-## 6. Autores
-André Rocha - up202407636
-<completar>
-<completar>
+## 👤 My contribution
+- Project setup (CMake), the **interactive menu and batch CLI**
+- **CSV parsing** without duplicates, and its integration with the graph
+- Core application logic and the README
+
+## 👥 Team
+André Rocha and two colleagues (group T06_G)
+
+📄 Original documentation (Portuguese): [README_PT.md](README_PT.md)

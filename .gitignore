@@ -53,3 +53,8 @@ Makefile
 
 docs/html/
 docs/latex/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
